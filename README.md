@@ -15,4 +15,4 @@ This repository houses my personal portfolio website, designed to showcase my jo
 
 ## How to View
 You can view the live version of this portfolio by visiting: 
-`https://SebastianShen904.github.io/WebDev-Portfolio-SebastianShen/`
+`https://SebastianShen904.github.io/WebDev-Portfolio-SebastianShen/` Does this work?

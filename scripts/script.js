@@ -28,9 +28,8 @@ form.addEventListener("submit", function(event) {
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     
-    // Check if fields are empty
     if (name === "" || email === "") {
-        event.preventDefault(); // Stop form from submitting
+        event.preventDefault(); 
         errorMsg.textContent = "Please fill out both your name and email.";
     } else if (!email.includes("@")) {
         event.preventDefault();
@@ -39,6 +38,6 @@ form.addEventListener("submit", function(event) {
         errorMsg.textContent = "";
         errorMsg.style.color = "green";
         errorMsg.textContent = "Form validated successfully!";
-        event.preventDefault(); // Prevent actual submission for demo purposes
+        event.preventDefault(); 
     }
 });

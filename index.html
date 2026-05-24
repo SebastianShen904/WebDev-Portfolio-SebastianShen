@@ -3,63 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Portfolio</title>
+    <title>My Web Development Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#process">Process & Goals</a></li>
+                <li><a href="#design-thinking">Design Thinking</a></li>
+                <li><a href="#un-goals">UN Goals</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
                 <li><a href="#behind-curtain">Behind the Curtain</a></li>
             </ul>
         </nav>
+        <div class="controls">
+            <button id="theme-toggle">🌙 Dark Mode</button>
+            <button id="music-toggle">🎵 Play Music</button>
+            <audio id="bg-music" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </header>
 
     <main>
-        <section id="home" class="hero-section">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Laptop displaying computer code" class="hero-img">
-            <h1>Hello, I'm a Web Developer & Future Engineer</h1>
-            <p>I am a high school student currently enrolled in senior-level STEM courses, targeting competitive engineering programs. I love combining logic, mathematics, and code to solve complex problems.</p>
+        <section id="home" class="fade-in">
+            <h1>Hello, I'm a Web Developer</h1>
+            <p>Welcome to my portfolio! I am passionate about creating interactive, accessible, and user-friendly websites.</p>
         </section>
 
-        <section id="portfolio">
-            <h2>My Portfolio</h2>
+        <section id="portfolio" class="fade-in">
+            <h2>My Projects & Hobbies</h2>
             <div class="grid-container">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tech circuit board" class="portfolio-img">
-                    <h3>C++ Physics Engine</h3>
-                    <p>A self-directed advanced C++ project building a physics-based engine simulation focused on gravity and collision detection.</p>
+                <div class="card" onclick="alert('I love hitting the court! It teaches teamwork and quick decision-making.')">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500" alt="A basketball hoop against a blue sky">
+                    <h3>Playing Basketball</h3>
+                    <p>Click to learn more!</p>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Basketball sitting on a court" class="portfolio-img">
-                    <h3>Varsity Basketball</h3>
-                    <p>Playing through the playoffs has taught me that on the court, teamwork is the highest priority, requiring constant communication and trust.</p>
+                <div class="card" onclick="alert('Building the web of tomorrow using HTML, CSS, and JS.')">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="A laptop showing web development code">
+                    <h3>Web Development</h3>
+                    <p>Click to learn more!</p>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Weights in a gym" class="portfolio-img">
-                    <h3>Fitness & Conditioning</h3>
-                    <p>Maintaining a rigorous fitness routine helps me build discipline and keeps my mind sharp for long coding and study sessions.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="process">
-            <h2>Process & Impact</h2>
-            <div class="flex-container">
-                <div class="text-box">
-                    <h3>Design Thinking Process</h3>
-                    <p>To build this site, I empathized with the end-user (university admissions and peers). I ideated the layout, prototyped using HTML structures, and iterated on the CSS to ensure a clean design.</p>
-                </div>
-                <div class="text-box">
-                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Student writing notes" class="inline-img">
-                    <h3>UN Global Goal: Quality Education</h3>
-                    <p>I operate a neighborhood harvest and free tutoring initiative for middle schoolers. My focus is entirely on fostering problem-solving skills and teaching independence so students can tackle challenges on their own.</p>
+                <div class="card" onclick="alert('Solving complex logic puzzles and building robust software.')">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500" alt="A computer screen showing C++ code">
+                    <h3>Coding with C++</h3>
+                    <p>Click to learn more!</p>
                 </div>
             </div>
         </section>
 
-        <section id="accessibility">
+        <section id="design-thinking" class="fade-in">
+            <h2>Design Thinking Process</h2>
+            <p>To build this site, I empathized with my users by prioritizing readability. I defined the structure using wireframes, ideated a three-color scheme, prototyped the layout in CodeSandbox, and tested the interactive JavaScript features to ensure they worked smoothly.</p>
+        </section>
+
+        <section id="un-goals" class="fade-in">
+            <h2>UN Global Goal: Quality Education</h2>
+            <p>I am passionate about Goal 4: Quality Education. By learning web development, I can build educational tools and share knowledge globally, ensuring inclusive and equitable learning opportunities for everyone.</p>
+        </section>
+
+        <section id="accessibility" class="fade-in">
             <h2>Accessibility Statement</h2>
+            <p>This website follows WCAG guidelines by using high-contrast colors, descriptive alt text for all images, and semantic HTML to ensure screen readers can easily parse the content.</p>
+        </section>
+
+        <section id="behind-curtain" class="fade-in">
+            <h2>Behind the Curtain</h2>
+            <p><strong>Challenges:</strong> Managing the layout across different screen sizes was challenging, but Flexbox made it much easier.<br>
+            <strong>Developer Tools:</strong> I heavily used the Chrome Inspector (and CodeSandbox Console) to debug my JavaScript logic.<br>
+            <strong>What I learned:</strong> I learned how to integrate DOM manipulation with CSS transitions to create a smooth user experience.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Web Portfolio. Built with HTML, CSS, and JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

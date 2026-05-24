@@ -1,43 +1,48 @@
 
-const modal = document.getElementById("codeModal");
-const btn = document.getElementById("modalBtn");
-const span = document.getElementsByClassName("close")[0];
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
 
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-const form = document.getElementById("contactForm");
-const errorMsg = document.getElementById("formError");
-
-form.addEventListener("submit", function(event) {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+themeToggleBtn.addEventListener('click', () => {
     
-    if (name === "" || email === "") {
-        event.preventDefault(); 
-        errorMsg.textContent = "Please fill out both your name and email.";
-    } else if (!email.includes("@")) {
-        event.preventDefault();
-        errorMsg.textContent = "Please enter a valid email address.";
+    body.classList.toggle('dark-mode');
+    
+   
+    if (body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = '☀️ Light Mode';
     } else {
-        errorMsg.textContent = "";
-        errorMsg.style.color = "green";
-        errorMsg.textContent = "Form validated successfully!";
-        event.preventDefault(); 
+        themeToggleBtn.textContent = '🌙 Dark Mode';
     }
+});
+
+
+const musicToggleBtn = document.getElementById('music-toggle');
+const bgMusic = document.getElementById('bg-music');
+let isPlaying = false;
+
+musicToggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+        bgMusic.pause();
+        musicToggleBtn.textContent = '🎵 Play Music';
+    } else {
+        
+        bgMusic.play().then(() => {
+            musicToggleBtn.textContent = '⏸ Pause Music';
+        }).catch(error => {
+            console.log("Audio play failed (browser might require user interaction first):", error);
+        });
+    }
+    isPlaying = !isPlaying;
+});
+
+
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });

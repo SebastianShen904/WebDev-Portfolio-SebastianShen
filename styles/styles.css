@@ -155,3 +155,17 @@ footer {
         justify-content: center;
     }
 }
+
+#home {
+    text-align: center;
+}
+.profile-pic {
+    width: 150px;          
+    height: 150px;          
+    border-radius: 50%;     
+    object-fit: cover;     
+    display: block;
+    margin: 0 auto 15px auto; 
+    border: 3px solid var(--secondary-color); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+}

@@ -37,12 +37,24 @@ musicToggleBtn.addEventListener('click', () => {
 
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
+        e.preventDefault(); 
         
-        targetSection.scrollIntoView({
-            behavior: 'smooth'
+        const targetId = this.getAttribute('href').substring(1);
+        
+        
+        document.querySelectorAll('main section').forEach(section => {
+            section.classList.remove('active');
+            
+        
+            section.classList.remove('fade-in'); 
+            void section.offsetWidth; 
+            section.classList.add('fade-in'); 
         });
+        
+       
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
     });
 });

@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.4s ease, color 0.4s ease;
-    line-height: 1.6;
+    line-height: 2.0;
 }
 
 
@@ -34,7 +34,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex; /* Flexbox Layout */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -73,8 +73,7 @@ button {
 
 button:hover {
     background-color: #2980b9;
-    transform: scale(1.05); /* CSS Animation/Transition */
-}
+    transform: scale(1.05); 
 
 
 main {
@@ -101,7 +100,7 @@ h1, h2 {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Responsive design */
+    flex-wrap: wrap; 
 }
 
 .card {
